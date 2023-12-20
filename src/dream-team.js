@@ -16,6 +16,7 @@ const { NotImplementedError } = require("../extensions/index.js");
 function createDreamTeam(members) {
   let dump='';
   let subdump='';
+  if (!Array.isArray(members)) return false
 for (var prop in members) {
 
 if(typeof(members[prop])!="string") continue;
@@ -25,6 +26,7 @@ subdump= members[prop].replace(/\s/g,'')
 if(subdump.toString().charAt(0).toUpperCase() == subdump.toString().charAt(0).toUpperCase() && typeof(subdump)!="number"){ dump+=subdump.toString().charAt(0);}
 
 }
+dump=dump.toUpperCase();
 let sortString = (dump) => {
 return dump.split("").sort().join("");
 };
