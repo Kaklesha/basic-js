@@ -24,9 +24,6 @@ function deleteDigit(n) {
     dump = 0;
     for (var j = 0; j < n.length; j++) {
       if (j != i) dump += n[j];
-      // if(strCats[j]==="^^")count+=1;
-      // console.log(strCats[j]);strCats[j]
-      //dump+=n[j];
     }
     dump = Number(dump);
     console.log(count);
